@@ -1,0 +1,235 @@
+html, body, div, span, applet, object, iframe,
+h1,h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ../img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+/*body{ font-family:"Microsoft Yahei", "微软雅黑", Tahoma, Arial, sans-serif}
+h1{
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-weight: bold;
+	font-size: 30px;
+	margin-top: -10px !important;
+	text-align: center;
+	width: 100%;
+}
+.logo-img{ margin-top:-10px; height:80px;}
+.header{height:120px; background: #960300;}
+*/
+
+
+#stuHomeTown{
+		float:left;
+		margin-top: 0px;
+		margin-left: 0px;
+		width:300px;
+		
+	}
+#stuHomeTown select{
+		width:84px;
+	}
+#stuPresentAddress{
+		float:left;
+		margin-top: 0px;
+		margin-left: 0px;
+		width:300px;
+		
+	}
+#stuPresentAddress select{
+		width:84px;
+	}
+	
+.searchFromDiv1{
+	float:left;
+	margin-top:0px;
+}
+#starSearchDiv{
+	width:100%;
+	text-align:center;
+	float:left;
+}
+#userHeadImg{
+	
+}
+.userHeadDiv{
+	float:left;
+	
+}
+/* --------------------------------------------------------------- */
+.showSearchResult{
+	padding-top:5px;
+	font: 15px 'Source Sans Pro',Arial,Helvetica,sans-serif;
+	color: #585754;
+	font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, Arial, sans-serif,TrueType;
+}
+.resultDiv{
+	
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.detailInforDiv{
+	float:left;
+	margin-left:10px;
+}
+#basicInforDiv span{
+	width:120px;
+}
+#basicInforTable{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	background-color:#FFFFFF;
+	
+	border-style:inset;
+	word-break:break-all; 
+	word-wrap:break-word;
+	border-width:0px;
+}
+#basicInforTable td{
+	border-style:ridge;
+}
+/* --------------------------------------------------------------- */
+
+#baseInforDiv{
+	font-family: Tahoma,Verdana,STHeiTi,simsun,sans-serif;
+	float:left;
+	width:70%;
+	height:100%;
+	background-color:#FFFFFF;
+	border-right: 5px double #DDD;
+}
+#detailInforDiv{
+	float:left;
+	width:29%;
+	height:100%;
+	background-color:#FFFFFF;
+}
+.singleResultDiv{
+	height:120px;
+	margin-left:10%;
+	width:80%;
+	background-color:;
+	margin-top:10px;
+	border-bottom: 1px solid #DDD;
+	
+	
+}
+.userHeadImg{
+	float:left;
+	margin:10px;
+	height:100px;
+	width:100px;
+}
+.userHeadImgInTable{
+	float:left;
+	margin:0px;
+	height:100px;
+	width:100px;
+}
+
+.userHeadImg img{
+	height:100px;
+	width:100px;
+}
+.baseUserInformation{
+	float:left;
+	margin:10px;
+}
+#userNameDiv{
+	float:left;
+	height:30px;
+	width:100%;
+}
+#userNameDiv span{
+	color:#369;
+	font-weight:bold;
+}
+#userBaseInforDiv {
+	font-size:9pt;
+	float: left;
+	width:100%;
+	margin-top: 20px;
+}
+#userBaseInforDiv .userProperty{
+	color:#aaa;
+}
+
+.toDetailDiv{
+	float:right;
+	color:blue;
+	cursor:hand;
+	margin-top:15px;
+}
+.singleDetailDiv{
+	display:none; 
+}
+
+.nav-home{
+	color: #960300;
+	cursor: pointer;
+	position: absolute;
+    left: 80px
+}
+#studentHomeTown,#studentPresentAddress{
+	display:none
+}
+
+#selectAddressDiv{
+	width:800px;
+	margin-top:20px;
+	float:left;
+	
+}
+
+
+
+.slogan-img{
+margin-top: 15px;
+margin-left: 50px;
+float:left;
+}
+.pivDIV{
+	margin-top: 15px;
+margin-left: 143px;
+float: left;
+width: 800px;
+}
+.pivDIV2{
+	margin-top: 15px;
+	margin-left: 20px;
+	float: left;
+	width:483px;
+}
+li.odd {
+background-color: #ADCDEA;
+}
+.dpart-box{
+	float: left;
+	width: 250px;
+	margin-left: 50px;
+	margin-top:20px;
+	font: 1em 'Source Sans Pro',Arial,Helvetica,sans-serif;
+color: #585754;
+font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, Arial, sans-serif,TrueType
+}
+li{
+border-left: 3px solid #408ED6;
+height:44px;
+}
+li:hover {
+border-left: 3px solid #A61D31;
+}
+li a{
+font-size: 1em;
+line-height: 2.5em;
+margin: 0 0 0 5px;
+text-shadow: 0 1px 0 #ffffff;
+}

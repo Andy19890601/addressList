@@ -1,0 +1,45 @@
+.footer hr.soften {
+height: 1px;
+margin: 0px 0 10px 0;
+background-image: -webkit-linear-gradient(left, transparent, rgba(255, 255, 255, 1), transparent);
+background-image: -moz-linear-gradient(left, transparent, rgba(255, 255, 255, 1), transparent);
+background-image: -ms-linear-gradient(left, transparent, rgba(255, 255, 255, 1), transparent);
+background-image: -o-linear-gradient(left, transparent, rgba(255, 255, 255, 1), transparent);
+border: 0;
+}
+.footer {
+margin: 20px 0 0 0;
+background-color: #333;
+border-top: 15px solid #F3D55E;
+}
+.container {
+margin-right: auto;
+margin-left: auto;
+padding-bottom: 7px;
+}
+.footer .back2top {
+margin: -61px 10px;
+color: #333;
+background-color: #F3D55E;
+-webkit-border-radius: 12px;
+-moz-border-radius: 12px;
+border-radius: 12px;
+line-height: 1.2em;
+padding: 5px 15px;
+text-align: center;
+}
+
+.pull-right {
+float: right;
+}
+.copyright p {
+margin-bottom: 10px;
+font-weight: normal;
+text-align:center;
+}
+.footer .slogan h3 {
+font-size: 1.4em;
+color: white;
+font-weight: normal;
+letter-spacing: 2px;
+}

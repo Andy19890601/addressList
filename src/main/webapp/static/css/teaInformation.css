@@ -1,0 +1,27 @@
+ body {
+    margin:0px !important;
+ 	background: #CCCCCC;
+	font: 10px 'Source Sans Pro',Arial,Helvetica,sans-serif;
+	color: #585754;
+	font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, Arial, sans-serif,TrueType;
+	}
+.teaInfoDiv{
+	width:500px;margin-left:auto;margin-right:auto;background-color:#CCCCFF;padding-top: 1px;
+	}
+	
+.header{height:120px; background: #194A81;}
+.logo-img{ margin-top:-10px; height:80px;}
+h1{
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-weight: bold;
+	font-size: 30px;
+	margin-top: -10;
+	text-align: center;
+	width: 100%;
+}
+h2{
+	text-align:center;font-size:20px;
+	font-family: Arial, Helvetica, sans-serif;
+}

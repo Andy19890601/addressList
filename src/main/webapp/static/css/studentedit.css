@@ -1,0 +1,91 @@
+.editContainDIV{
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:10px;
+	width:866px;
+	height:620px;
+	
+}
+.headimgDIV{
+	float:left;
+	width:100%;
+	height:45px;
+	background-color:white;
+	margin-bottom:12px;
+}
+.smallimgDIV{
+	border: 1px solid #D9DCE2;
+	float: left;
+	height: 35px;
+	margin-left: 5px;
+	margin-right: 10px;
+	padding: 1px;
+	width: 35px;
+}
+.headimgDIV div img{
+	width:35px;
+	height:35px;
+}
+.info-section{
+margin-bottom: 10px;
+margin-right: 10px;
+overflow: hidden;
+zoom: 1;
+width: 387px;
+float: left;
+padding: 20px 19px 10px;
+background: #fff;
+border: 1px solid #dedede;
+box-shadow: 0 1px 0 #DEDEDE;
+-webkit-border-radius: 3px;
+-khtml-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+
+
+
+.headinfo_0{
+	float:left;
+	width:50px;
+	margin-top: 10px;
+}
+
+.headinfo_1{
+	float:left;
+	width: 130px;
+	margin-top: 7px;
+	margin-left: 193px;
+}
+.headinfo_2{
+	float:right;
+	width: 75px;
+	margin-top: 12px;
+	margin-right: 20px;
+}
+.backhomeImg,.changeinfoImg{
+	width:16px  !important;
+	height:16px  !important;
+}
+.headspan0{
+	color:#000000;
+}
+.headspan1{
+	font-size: 20px;
+}
+.headspan2{
+	font-size: 10px;
+}
+.otherDIV,.extraDIV,.workDIV{
+	margin-right:0px !important;
+}
+#studentBirthdaydl,#studentHomeTown{
+	display:none;
+}
+
+
+.Info_handerDIV{
+	float: left;
+margin-top: 11px;
+}
+

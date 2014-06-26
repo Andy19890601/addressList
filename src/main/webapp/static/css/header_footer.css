@@ -1,0 +1,143 @@
+ body { 
+	font: 10px 'Source Sans Pro',Arial,Helvetica,sans-serif;
+	color: #000000;
+	font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, Arial, sans-serif,TrueType;
+	margin:0px !important;
+	width: 100%;
+margin-bottom: -50px;
+
+background: url(../img/mainbg.jpg) repeat-y center center;
+margin-top: -3px;
+	}	
+	
+.header{
+	background:#960300;
+	padding:60px;}
+.logo-img{ 
+	margin-top: -70px;
+height: 80px;
+float: left;
+margin-left: -60;
+}
+h1{
+float: left;
+font-family: Arial, Helvetica, sans-serif;
+color: #fff;
+font-weight: bold;
+font-size: 30px;
+margin-top: -10px !important;
+text-align: center;
+width: 600px;
+margin-left: 140px !important;
+}
+
+a:link,a:visited{color:#575757;text-decoration:none;}
+a:hover{color:#ef4165;text-decoration:none;}
+a:active{color:#1d7400;}
+
+h2{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+	width:100%;
+	text-align:left;
+}
+
+.header .logo{height:86px;width:256px;margin-top:25px}
+.wrap{
+	background: #FFFFFF;
+	height:100% ;
+}
+.top-nav{
+	min-height: 450px;
+	font-size: 15px;
+}
+.top-nav .navlist-wrap{ width:100%;margin:0 auto;position:relative;height:30px;}
+.top-nav .navlist{height: 25px;background-color: #EBCC78;padding-top: 5px;padding-left: 100px;}
+.top-nav .navlist .nav-btn{float:left;margin-left:60px;color:#960300;vertical-align:middle;text-decoration:none}
+.navlist .nav-btn span{background:url(../img/broswer_home.png) no-repeat -29px -145px;display:inline-block;width:16px;height:16px;margin-left:4px;vertical-align:middle;*height:12px;*vertical-align:middle;*cursor:pointer;*letter-spacing:0;*margin-left:0;*background-position:-26px -145px}
+
+.top-nav .navlist .nav-btn_{float:left;margin-left:60px;color:#960300;vertical-align:middle;text-decoration:none}
+
+
+.navlist .btn-active span{background:url(../img/broswer_home.png) no-repeat -8px -145px;*background-position:-5px -145px}
+.top-nav .expand{height:0px;background-color:#EAEAEA;overflow:hidden;position:relative;width:100%}
+.expand .download{height:120px;width:500%;font-size: 12px;}
+.expand .download .item{float:left;width:20%}
+.expand .download .item-active{display:block}
+.expand .close-btn{width:120px;height:20px;background:url(../img/broswer_home.png) no-repeat -13px -117px;position:absolute;left:50%;bottom:-2px;margin-left:-60px;cursor:pointer;}
+.download .download-list{height:56px;padding:15px;}
+.download .download-list .btn{display:inline-block;text-decoration:none;color:#586e91;font-size:18px;line-height:24px;margin:0 28px;cursor:pointer}
+.download .download-list .btn:hover{color:#7896af}
+.download-list .btn .icon{background-repeat:no-repeat;background-image:url(../../img/broswer_home.png);height:56px;width:56px;float:left}
+.download-list .btn .text{float:left;padding:16px 0 16px 16px}
+.download-list .zj .icon{background-position:-4px 0}
+.download .download-list .zj{}
+.download .download-list .zj:hover .icon{background-position:-5px -57px}
+.download .download-list .sjgj{}
+.download .download-list .sjgj .icon{background-position:-58px 0}
+.download .download-list .sjgj:hover .icon{background-position:-59px -58px}
+.download .download-list .wdj{}
+.download-list .wdj .icon{background-position:-169px -4px}
+.download-list .wdj:hover .icon{background-position:-169px -64px}
+.download .download-list .jy{}
+.download-list .jy .icon{background-position:-114px 0}
+.download-list .jy:hover .icon{background-position:-114px -62px}
+.download-list .apple .icon{background-position:-225px -1px;width:38px}
+.download-list .apple:hover .icon{background-position:-225px -58px}
+.download-list .itools .icon{background-position:-270px 0}
+.download-list .itools:hover .icon{background-position:-270px -57px}
+.top-nav .nav-bottom-bg{height:7px;_font-size:1px;background-color:#fff}
+
+.btm{ margin:30px auto;}
+.btm p{ font:normal 12px/24px 'Microsoft YaHei'; text-align:center;}
+
+
+
+
+
+
+
+
+
+
+
+.usercenter{
+position: absolute;
+width: 140px;
+right: 122px;	
+}
+.mailscenter{
+position: absolute;
+width: 80px;
+right: 65px;
+color:red !important;
+}
+.mailscenter span{
+background: url(../img/icon_mail.png) no-repeat 0px -1px;
+display: inline-block;
+width: 20px;
+height: 16px;
+margin-left: 4px;
+vertical-align: middle;
+}
+.exit{
+position: absolute;
+width: 115px;
+right: 30px;		
+}
+.mainbgDIV{
+
+}
+.footer_layout{
+background: url(../img/footpku.png) no-repeat center top;
+position: absolute;
+height: 74px;
+width:inherit;
+bottom: 0px;
+}
+.footer_layout_container{
+position:relative;
+height:100px;
+width:inherit;
+}
