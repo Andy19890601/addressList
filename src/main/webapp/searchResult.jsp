@@ -1,17 +1,29 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ page language="java" import="cn.edu.pku.residents.entity.*"%>
 <%@ page language="java" import="cn.edu.pku.residents.vo.*"%>
+<%@ page language="java" import="cn.edu.pku.residents.util.*"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
+	StudentSession ss = (StudentSession) session
+			.getAttribute("studentSession");
+	Page pageUtil = (Page) request.getAttribute("pageUtil");
+	int pageNum = pageUtil.getIndex(); //页的编号
+	int pageNumTotal = -1;
+	if (pageUtil.getCount() % pageUtil.getSize() == 0)
+		pageNumTotal = pageUtil.getCount() / pageUtil.getSize(); //页数
+	else {
+		pageNumTotal = pageUtil.getCount() / pageUtil.getSize() + 1;
+	}
+	//int pageNumTotal = 4;
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<base href="<%=basePath%>">
+<base href="<%//123=basePath%>">
 
 <title>欢迎进入北京大学软件与微电子学院校友网</title>
 
@@ -23,21 +35,24 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	
 	-->
-<link rel="stylesheet" type="text/css"
-	href="/static/css/header_footer.css" />
 <link rel="shortcut icon" href="/static/img/favicon32_32.ico">
 <link rel="stylesheet" type="text/css"
 	href="/static/css/jquery.ui.all.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/homepage.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/searchResault.css" />
 <link rel="stylesheet" type="text/css"
-	href="/static/css/searchResault.css" />
+	href="/static/css/header_footer.css" />
+
+
 <script type="text/javascript" src="/static/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.marquee.js"></script>
 <script type="text/javascript" src="/static/js/homepage.js"></script>
-<script type="text/javascript" src="/static/js/searchResault.js"></script>
 <script type="text/javascript" src="/static/js/search.js"></script>
+<script type="text/javascript" src="/static/js/searchResault.js"></script>
+
 <script type="text/javascript" src="/static/js/jquery.provincesCity.js"></script>
 <script type="text/javascript" src="/static/js/provincesdata.js"></script>
-
+<script type="text/javascript" src="/static/js/dynamicImgs.js"></script>
 <script type="text/javascript">
 	//调用插件
 	$(function() {
@@ -54,25 +69,32 @@
 		<div class="header">
 			<!--	<h1 class="logo"><a href="http://www.lanrentuku.com" target="_blank"><img src="images/logo.jpg" alt="123"></a></h1>  -->
 			<!--  	<h1>北京大学软件与微电子学院院友网</h1> -->
-			<img class="logo-img" src="/static/img/logo-v4.png">
+			<a href="homepage.jsp"><img class="logo-img"
+				src="static/img/logo-v4.png"></a>
 			<div>
-				<h1>北京大学软件与微电子学院院友网</h1>
+				<a href="homepage.jsp"><h1>北京大学软件与微电子学院院友网</h1></a>
 			</div>
 		</div>
 		<div class="top-nav">
 			<div id="navList" class="navlist-wrap">
 
+
 				<div class="navlist clearfix">
 
 					<a href="" class="nav-btn" id="findStu" data-device="">找同学<span>&nbsp;&nbsp;&nbsp;</span></a>
-					<a href="" class="nav-btn_" id="findnews" data-device="">新闻<span>&nbsp;&nbsp;&nbsp;</span></a>
-					<a href="" class="nav-btn_" id="findassociation" data-device="">校友会<span>&nbsp;&nbsp;&nbsp;</span></a>
-					<a href="" class="nav-btn_" id="findpic" data-device="">照片和视频<span>&nbsp;&nbsp;&nbsp;</span></a>
-					<a href="" class="nav-btn_" id="finddonate" data-device="">捐赠<span>&nbsp;&nbsp;&nbsp;</span></a>
-					<span class="nav-home">首页</span> <a href="showStudentInfo"
-						class="usercenter" title="进入个人中心"><span class="nav-home">刘波<span></span></span></a>
-					<a href="" class="mailscenter" title="进入消息中心 "><span></span>3</span></a> <a
-						href="" class="exit" title="退出"><span class="nav-home">退出</span></a>
+					<a href="news.jsp" class="nav-btn_" id="findnews" data-device=""><span>新闻&nbsp;&nbsp;&nbsp;</span></a>
+					<a href="aa.jsp" class="nav-btn_" id="findassociation"
+						data-device=""><span>校友会&nbsp;&nbsp;&nbsp;</span></a> <a
+						href="photowall.jsp" class="nav-btn_" id="findpic" data-device=""><span>照片墙&nbsp;&nbsp;&nbsp;</span></a>
+					<a href="bbs.jsp" class="nav-btn_" id="finddonate" data-device=""><span>交流区&nbsp;&nbsp;&nbsp;</span></a>
+					<span class="nav-home"><a href="homepage.jsp">首页</a></span> <a
+						href="showStudentInfo" class="usercenter" title="进入个人中心"><span
+						class="nav-home" style=""> <%
+ 	//123=ss.getStudentID()
+ %><span></span>
+					</span></a> <a href="newsCenter.jsp" class="mailscenter" title="进入消息中心 "><span></span>3</span></a>
+
+					<a href="" class="exit" title="退出"><span class="nav-home">退出</span></a>
 
 				</div>
 				<div id="expandZone" class="expand active">
@@ -202,27 +224,16 @@
 								<span class="userProperty">Email： </span><span><%=s.getStudentEmail()%></span>
 							</div>
 
-							<div id="toDetailDiv_<%=index%>" class="toDetailDiv">
-								<a href="" class="sendMsg" title="发送私信 "></a> <span
-									id='toDetail_<%=index%>'>详细>></span>
+							<div id="toDetailDiv_<%=i%>" class="toDetailDiv">
+								<a id="sendMsg_<%=i%>" href="#" class="sendMsg" title="发送私信<%=i%>"></a> <a
+									id='toDetail_<%=index%>'>详细>></a>
 							</div>
 						</div>
 					</div>
 					<%
 						index++;
 							}
-						}
-					%>
-					<%
-						Page pageUtil = (Page) request.getAttribute("pageUtil");
-						int pageNum = pageUtil.getIndex(); //页的编号
-						int pageNumTotal = -1;
-						if (pageUtil.getCount() % pageUtil.getSize() == 0)
-							pageNumTotal = pageUtil.getCount() / pageUtil.getSize(); //页数
-						else {
-							pageNumTotal = pageUtil.getCount() / pageUtil.getSize() + 1;
-						}
-						//int pageNumTotal = 4;
+						
 					%>
 					<div id='pageTurnDIv'>
 						<%
@@ -238,7 +249,7 @@
 						</script>
 						<%
 							}
-							if (pageNum >= pageNumTotal) {
+								if (pageNum >= pageNumTotal) {
 						%>
 						<script>
 							$(function() {
@@ -256,22 +267,38 @@
 						<select id='pageNumSelect'>
 							<%
 								for (int i = 0; i < pageNumTotal; ++i) {
-									if (i == pageNum) {
+										if (i == pageNum) {
 							%>
-							<option selected="selected" value="<%=(i + 1)%>">第<%=(i + 1)%>页
+							<option selected="selected" value="<%=(i)%>">第<%=(i + 1)%>页
 							</option>
 
 							<%
 								} else {
 							%>
-							<option value="<%=(i + 1)%>">第<%=(i + 1)%>页
+							<option value="<%=(i)%>">第<%=(i + 1)%>页
 							</option>
 							<%
 								}
-								}
+									}
 							%>
 						</select>
 					</div>
+					<%
+						} else {
+					%>
+					<!-- 在此处增加代码判断，若无搜索结果则显示下面这个div -->
+					<div class="singleResultDiv" id="noSearchResultDIV">
+						<div>
+							<span>..无搜索结果，请更改搜索条件后查询..</span>
+						</div>
+					</div>
+
+
+					<%
+						}
+					%>
+
+
 
 				</div>
 				<%
@@ -327,6 +354,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<!-- 代码 结束 -->
 	<%
 		StudentQueryRestrictions restrictions = (StudentQueryRestrictions) request
@@ -354,6 +382,27 @@
 				value="<%=restrictions.getStudentPresentAddress()%>" />
 		</form>
 	</div>
-
+	
+	<!-- 下面的form表用来发送私信 -->
+	<div class="MessageContainerDIV">
+		<div class="MessageDIV">
+			<div>
+				<span></span>
+			</div>
+			<div class="replyMessageDIV">
+				<form action="replyMsg" id="replyMessageForm">
+					<input name="studentID" style="display: none;" /><br> <input
+						name="studentName" style="display: none;" /> <input name="newsID"
+						style="display: none;" /> <span>回复给：</span><span
+						id='replyNameSpan'></span><span>(140字以内)</span><br>
+					<textarea maxlength='140' name="sendContent" id="msgReplyContent"
+						style="width: 525px; height: 140px; margin-top: 10px;">
+				</textarea>
+					<br> <input type="submit" value="发送 " id="sendCommit">
+					<input type="button" value="取消" id="sendCancle">
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

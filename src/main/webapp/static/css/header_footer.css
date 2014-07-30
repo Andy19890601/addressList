@@ -1,5 +1,5 @@
  body { 
-	font: 10px 'Source Sans Pro',Arial,Helvetica,sans-serif;
+	font: 12px 'Source Sans Pro',Arial,Helvetica,sans-serif;
 	color: #000000;
 	font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, Arial, sans-serif,TrueType;
 	margin:0px !important;
@@ -9,7 +9,9 @@ margin-bottom: -50px;
 background: url(../img/mainbg.jpg) repeat-y center center;
 margin-top: -3px;
 	}	
-	
+.clear {
+clear: both;
+}
 .header{
 	background:#960300;
 	padding:60px;}
@@ -18,6 +20,9 @@ margin-top: -3px;
 height: 80px;
 float: left;
 margin-left: -60;
+}
+a img {
+border-width: 0;
 }
 h1{
 float: left;
@@ -30,11 +35,14 @@ text-align: center;
 width: 600px;
 margin-left: 140px !important;
 }
-
-a:link,a:visited{color:#575757;text-decoration:none;}
-a:hover{color:#ef4165;text-decoration:none;}
+li {
+list-style: none;
+}
+a:link,a:visited{color:#000000;text-decoration:none;}
+a:hover{/*color:#ef4165;*/text-decoration:underline;}
+/**
 a:active{color:#1d7400;}
-
+**/
 h2{
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
@@ -42,6 +50,12 @@ h2{
 	width:100%;
 	text-align:left;
 }
+form, ul, p {
+margin: 0px;
+padding: 0;
+}
+
+
 
 .header .logo{height:86px;width:256px;margin-top:25px}
 .wrap{
@@ -50,18 +64,21 @@ h2{
 }
 .top-nav{
 	min-height: 450px;
-	font-size: 15px;
+	
 }
-.top-nav .navlist-wrap{ width:100%;margin:0 auto;position:relative;height:30px;}
+.top-nav .navlist-wrap{font-size:15px; width:100%;margin:0 auto;position:relative;height:30px;}
 .top-nav .navlist{height: 25px;background-color: #EBCC78;padding-top: 5px;padding-left: 100px;}
 .top-nav .navlist .nav-btn{float:left;margin-left:60px;color:#960300;vertical-align:middle;text-decoration:none}
 .navlist .nav-btn span{background:url(../img/broswer_home.png) no-repeat -29px -145px;display:inline-block;width:16px;height:16px;margin-left:4px;vertical-align:middle;*height:12px;*vertical-align:middle;*cursor:pointer;*letter-spacing:0;*margin-left:0;*background-position:-26px -145px}
 
 .top-nav .navlist .nav-btn_{float:left;margin-left:60px;color:#960300;vertical-align:middle;text-decoration:none}
-
+.navlist span a{float: left;
+color: #960300;
+vertical-align: middle;
+text-decoration: none;}
 
 .navlist .btn-active span{background:url(../img/broswer_home.png) no-repeat -8px -145px;*background-position:-5px -145px}
-.top-nav .expand{height:0px;background-color:#EAEAEA;overflow:hidden;position:relative;width:100%}
+.top-nav .expand{height:0px;background-color:#EAEAEA;overflow:hidden;position:relative;width:100%;z-index: 1;}
 .expand .download{height:120px;width:500%;font-size: 12px;}
 .expand .download .item{float:left;width:20%}
 .expand .download .item-active{display:block}
@@ -98,10 +115,54 @@ h2{
 
 
 
+#stuHomeTown{
+		float:left;
+		margin-top: 0px;
+		margin-left: 0px;
+		width:300px;
+		
+	}
+#stuHomeTown select{
+		width:84px;
+	}
+#stuPresentAddress{
+		float: left;
+margin-top: 0px;
+margin-left: 0px;
+width: 300px;
+		
+	}
+#stuPresentAddress select{
+		width:84px;
+	}
+	
+.searchFromDiv1{
+	float:left;
+	margin-top:0px;
+	width: 100%;
+}
+#starSearchDiv{
+	width:100%;
+	text-align:center;
+	float:left;
+}
 
+.nav-home{
+	color: #960300;
+	cursor: pointer;
+	position: absolute;
+    left: 80px
+}
+#studentHomeTown,#studentPresentAddress{
+	display:none
+}
 
-
-
+#selectAddressDiv{
+	margin-top: 0px;
+float: left;
+width: 312px;
+	
+}
 .usercenter{
 position: absolute;
 width: 140px;
@@ -140,4 +201,60 @@ bottom: 0px;
 position:relative;
 height:100px;
 width:inherit;
+}
+.more {
+text-align: right;
+color: #999;
+}
+.more a {
+color: #999;
+font-size: 12px;
+}
+
+.dotted_line {
+background: url("../img/dotted_line_bg2.gif") repeat-x bottom;
+height: 1px;
+line-height: 1px;
+}
+.nodata {
+color: #999;
+}
+.comments_title {
+margin: 10px;
+background: url("../img/comments.png") no-repeat 0 0;
+font-size: 14px;
+padding-left: 20px;
+}
+#comments_list {
+padding: 0px;
+}
+.notice {
+background: #FFF6BF;
+color: #514721;
+border-color: #FFD324;
+margin: 10px 0;
+border-width: 1px;
+}
+.notice a {
+color: #514721;
+background: none;
+padding: 0;
+margin: 0;
+}
+.con_small_list {
+margin: 5px;
+}
+.con_small_list li {
+height: 24px;
+background: url("../img/dot1.gif") no-repeat 0 5px;
+padding-left: 10px;
+position: relative;
+}
+
+#body {
+width: 986px;
+background: #FFF;
+margin: 0px auto;
+padding: 10px 10px 50px 10px;
+_margin-top: -3px;
 }

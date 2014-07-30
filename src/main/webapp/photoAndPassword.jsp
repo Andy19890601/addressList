@@ -41,9 +41,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
    <div class="header">
-	<img class="logo-img" src="/static/img/logo-v4.png">
-	<div><h1>北京大学软件与微电子学院校友网</h1></div>
-   </div>
+			<!--	<h1 class="logo"><a href="http://www.lanrentuku.com" target="_blank"><img src="images/logo.jpg" alt="123"></a></h1>  -->
+			<!--  	<h1>北京大学软件与微电子学院院友网</h1> -->
+			<a href="homepage.jsp"><img class="logo-img" src="static/img/logo-v4.png"></a>
+			<div>
+				<a href="homepage.jsp"><h1>北京大学软件与微电子学院院友网</h1></a>
+			</div>
+		</div>
    <div class="papDIV">
    <fieldset>
    <form id="photoAndPwdForm" method="post" action="changePWD">
@@ -67,10 +71,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    </fieldset>
    </div>
     <div style="text-align:center;">
-	   	<a href="uploadingImage.jsp?back=1"><span>返回上一步</span></a>
+	   	<a href="showStudentInfo"><span>个人主页</span></a>
 	   </div>
-   <div class="footer_layout">
-   </div>
+  <div class="footer_layout_container">
+<div class="footer_layout">
+</div>
+</div>
    
   </body>
 </html>

@@ -2,6 +2,7 @@ package cn.edu.pku.residents.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -96,16 +97,11 @@ public class StudentController {
 	 */
 	@RequestMapping(value="search")
 	public String searchStudents(StudentQueryRestrictions restrictions, Page page, HttpServletRequest req){
-		System.out.println("--------Student Controller------------");
-		System.out.println(restrictions.toString());
-		System.out.println("page init=" + page.toString());
 		List<Student> studentList = studentService.list(restrictions, page);
 		Page p = studentService.paging(restrictions, page);
-		System.out.println("page=" + p.toString());
 		req.setAttribute("studentList", studentList);
 		req.setAttribute("studentQueryRestrictions", restrictions);
 		req.setAttribute("pageUtil", p);
-		System.out.println(studentList.size());
 		return "searchResult";
 	}
 
@@ -133,7 +129,7 @@ public class StudentController {
 		Student student = studentService.getStudentByID(ss.getStudentID());
 		student.setStudentPWD(password);
 		studentService.update(student);
-		return "redirect:/index";
+		return "redirect:/showStudentInfo";
 	}
 
 	/**
@@ -161,8 +157,8 @@ public class StudentController {
 	@RequestMapping(value="/updatingStudentInfo")
 	public String showStudentDetailInfo(StudentDto dto){
 		Student s = studentService.getStudentByID(dto.getStudentID());
+		System.out.println(s.toString());
 		if(s != null){
-			//	s.setInformationComplete(1);
 			s.setStudentName(dto.getStudentName());
 			s.setStudentSex(dto.getStudentSex());
 			s.setStudentEnrollment(dto.getStudentEnrollment());
@@ -181,10 +177,9 @@ public class StudentController {
 			s.setStudentPost(dto.getStudentPost());
 			s.setStudentYear(dto.getStudentYear()); 
 			s.setStudentDescription(dto.getStudentDescription());
-			//	s.setStudentPicturePath(file_ture_name);
 			studentService.update(s);
 		}
-		return "homepage";
+		return "redirect:/showStudentInfo";
 	}
 
 
@@ -223,8 +218,7 @@ public class StudentController {
 			//更新用户数据
 			Student s2 = studentService.getStudentByID(dto.getStudentID());
 			Student s = studentService.load(s2.getId());
-			System.out.println(s.toString());
-			System.out.println(dto.toString());
+			String picturePath = "/static/upload/" + file_ture_name;
 			if(s != null){
 				s.setInformationComplete(1);
 				s.setStudentName(dto.getStudentName());
@@ -245,7 +239,7 @@ public class StudentController {
 				s.setStudentPost(dto.getStudentPost());
 				s.setStudentYear(dto.getStudentYear()); 
 				s.setStudentDescription(dto.getStudentDescription());
-				s.setStudentPicturePath(file_ture_name);
+				s.setStudentPicturePath(picturePath);
 				studentService.update(s);
 			}else{
 				studentService.add(DtoUtil.newStudent(dto));
@@ -253,7 +247,7 @@ public class StudentController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
-		return "redirect:/index";  
+		return "redirect:/showStudentInfo";  
 	}
 
 
@@ -263,7 +257,6 @@ public class StudentController {
 	 * @return
 	 */
 	@RequestMapping(value="updateUploadImg", method = RequestMethod.POST)
-	@ResponseBody
 	public String updateUploadImg(MultipartFile file, HttpServletRequest request, ModelMap model,
 			HttpSession session) throws IOException{
 		if(file.getSize() <= 10000000){
@@ -304,7 +297,7 @@ public class StudentController {
 			model.addAttribute("upload_img_error", "上传文件过大！");
 			throw new RuntimeException("upload too large image!");
 		}
-		return "redirect:/index";  
+		return "redirect:/showStudentInfo";  
 	}
 
 	/**

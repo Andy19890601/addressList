@@ -1,0 +1,46 @@
+#findassociation{
+	font-weight:bold;
+}
+.blue_tab {
+border-bottom: 1px solid #CEE1EE;
+height: 26px;
+position: relative;
+}
+.blue_tab ul {
+position: absolute;
+top: 0px;
+left: 20px;
+}
+.blue_tab li {
+float: left;
+margin-right: 10px;
+text-align: center;
+}
+li {
+list-style: none;
+}
+.blue_tab a.cur {
+background: #fff;
+border: 1px solid #CEE1EE;
+border-bottom: 1px solid #fff;
+color: #333;
+}
+.tab_content {
+margin: 0px 20px;
+padding-bottom: 50px;
+}
+#aa_info {
+margin: 5px 0;
+}
+#aa_info li {
+height: 20px;
+background: url(../img/dot1.gif) no-repeat 0 6px;
+line-height: 20px;
+padding-left: 10px;
+overflow: hidden;
+}
+#aa_info li a.cur:link, #aa_info li a.cur:visited {
+color: #fff;
+background: #94070a;
+padding: 2px;
+}

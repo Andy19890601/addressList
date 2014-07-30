@@ -1,4 +1,9 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
+encoding//src/main/webapp/static/css/newsCenter.css=UTF-8
+encoding//src/main/webapp/static/js/jquery.provincesCity.js=UTF-8
+encoding//src/main/webapp/static/js/newsCenter.js=UTF-8
+encoding//src/main/webapp/static/js/provincesdata.js=UTF-8
+encoding//src/main/webapp/static/js/search.js=UTF-8
 encoding//src/test/java=UTF-8
 encoding/src=gbk

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import cn.edu.pku.residents.dao.StudentDao;
 import cn.edu.pku.residents.entity.Student;
 import cn.edu.pku.residents.service.StudentService;
+import cn.edu.pku.residents.util.StringUtil;
 import cn.edu.pku.residents.vo.Page;
 import cn.edu.pku.residents.vo.StudentQueryRestrictions;
 
@@ -64,9 +65,13 @@ public class StudentServiceImpl implements StudentService{
 
 	@Override
 	public List<Student> list(StudentQueryRestrictions restrictions, Page page) {
-		return studentDao.list(restrictions, page);
+		List<Student> list = studentDao.list(restrictions, page);
+		StringUtil.clearNull(list);
+		return list;
 	}
 
+	
+	
 	@Override
 	public int getinformationCompleteStatus(String username) {
 		return studentDao.getinformationCompleteStatus(username);
@@ -74,12 +79,16 @@ public class StudentServiceImpl implements StudentService{
 
 	@Override
 	public Student getStudentByName(String username) {
-		return studentDao.getStudentByName(username);
+		Student s = studentDao.getStudentByName(username);
+		StringUtil.clearNullForEntity(s);
+		return s;
 	}
 
 	@Override
 	public Student getStudentByID(String userID) {
-		return studentDao.getStudentByID(userID);
+		Student s = studentDao.getStudentByID(userID);
+		StringUtil.clearNullForEntity(s);
+		return s;
 	}
 
 

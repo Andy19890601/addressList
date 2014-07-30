@@ -1,11 +1,35 @@
 $(document).ready(function(){
 var currentYear = new Date().getFullYear();
     var select = document.getElementById("stuEnrollment");
+    var select_1 = document.getElementById("stuEnrollment_1");
+    var select_2 = document.getElementById("stuEnrollment_2");
+    var select_3 = document.getElementById("stuEnrollment_3");
+    
     for (var i = 2002; i <= currentYear; i++) {
-        var theOption = document.createElement("option");
-        theOption.innerHTML = i + "å¹´";
-        theOption.value = i;
-        select.appendChild(theOption);
+    	if(select!=null){
+	    	var theOption = document.createElement("option");
+	        theOption.innerHTML = i + "Äê";
+	        theOption.value = i;
+	        select.appendChild(theOption);
+    	}
+    	if(select_1!=null){
+	    	var theOption_1 = document.createElement("option");
+	       	theOption_1.innerHTML = i + "Äê";
+	        theOption_1.value = i;
+	        select_1.appendChild(theOption_1);
+    	}
+      if(select_2!=null){
+	    	var theOption_2 = document.createElement("option");
+	       	theOption_2.innerHTML = i + "Äê";
+	        theOption_2.value = i;
+	        select_2.appendChild(theOption_2);
+    	}
+      if(select_3!=null){
+	    	var theOption_3 = document.createElement("option");
+	       	theOption_3.innerHTML = i + "Äê";
+	        theOption_3.value = i;
+	        select_3.appendChild(theOption_3);
+    	}
         }
     
     
@@ -54,7 +78,7 @@ $('#stuInfoSubmit').click(function(){
 		$('#studentPresentAddress').val(presentaddress);	
 		
 		var value = $('#stuDescription').val();
-		if(value=='å¡«å†™æ“…é•¿é¢†åŸŸæˆ–æ±‚èŒã€å†…æŽ¨ã€æ‹›è˜ç­‰ä¿¡æ¯140å­—ä»¥å†…'){
+		if(value=='ÌîÐ´ÉÃ³¤ÁìÓò»òÇóÖ°¡¢ÄÚÍÆ¡¢ÕÐÆ¸µÈÐÅÏ¢140×ÖÒÔÄÚ'){
 			$('#stuDescription').val('');
 		}
 		$('form[id=stuInfoForm]').submit();
@@ -69,7 +93,7 @@ function textdown(e) {
         return;
     }
     if (document.getElementById('stuDescription').value.length >= 140) {
-        alert("å·²è¾¾åˆ°140å­—ä¸Šé™ï¼")
+        alert("ÒÑ´ïµ½140×ÖÉÏÏÞ£¡")
         if (!document.all) {
             textevent.preventDefault();
         } else {
@@ -79,7 +103,7 @@ function textdown(e) {
 };
 function textup() {
     var s = document.getElementById('stuDescription').value;
-    //åˆ¤æ–­IDä¸ºtextçš„æ–‡æœ¬åŒºåŸŸå­—æ•°æ˜¯å¦è¶…è¿‡100ä¸ª 
+    //ÅÐ¶ÏIDÎªtextµÄÎÄ±¾ÇøÓò×ÖÊýÊÇ·ñ³¬¹ý100¸ö 
     if (s.length > 140) {
         document.getElementById('textarea').value = s.substring(0, 100);
     }

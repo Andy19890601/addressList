@@ -34,10 +34,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body >
-    <div class="header">
-	<img class="logo-img" src="dist/img/logo-v4.png">
-	<div><h1>北京大学软件与微电子学院院友网</h1></div>
-	</div>
+ 		<div class="header">			
+			<a href="homepage.jsp"><img class="logo-img" src="static/img/logo-v4.png"></a>
+			<div>
+				<a href="homepage.jsp"><h1>北京大学软件与微电子学院院友网</h1></a>
+			</div>
+		</div>
     <div class="teaInfoDiv">
     <h2>请先完善您的资料</h2>
     <hr/>
@@ -95,7 +97,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
     </div>
     
-    <div class="footer_layout">
-		</div>
+    <div class="footer_layout_container">
+<div class="footer_layout">
+</div>
+</div>
   </body>
 </html>

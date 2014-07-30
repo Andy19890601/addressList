@@ -1,5 +1,6 @@
 package cn.edu.pku.residents.service;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -9,8 +10,10 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import cn.edu.pku.residents.entity.Message;
 import cn.edu.pku.residents.entity.Student;
 import cn.edu.pku.residents.entity.Teacher;
+import cn.edu.pku.residents.enu.ReadType;
 import cn.edu.pku.residents.service.StudentService;
 import cn.edu.pku.residents.service.TeacherService;
 
@@ -24,6 +27,9 @@ public class ExpertTest {
 	
 	@Resource 
 	private StudentService studentService;
+	
+	@Resource 
+	private MessageService msgService;
 	
 	@Test
 	public void teacherTest(){
@@ -60,7 +66,20 @@ public class ExpertTest {
 		System.out.println(s.getStudentEmail());
 	}
 	
-	
+	@Test
+	public void addMsg(){
+		for(int i = 0; i < 40; i++){
+		Message msg = new Message();
+		msg.setContent("111");
+		msg.setReadType(ReadType.unread);
+		msg.setTime(new Date().toGMTString());
+		msg.setReceiver("A0217008");
+		msg.setReceiverName("常恕恺");
+		msg.setSender("10317012");
+		msg.setSenderName("李康昊");
+		msgService.addMessage(msg);
+		}
+	}
 	
 	@Test 
 	public void loadTest(){

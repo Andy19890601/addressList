@@ -1,12 +1,14 @@
 package cn.edu.pku.residents.controller;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import cn.edu.pku.residents.entity.Student;
 import cn.edu.pku.residents.service.StudentService;
 import cn.edu.pku.residents.service.TeacherService;
 import cn.edu.pku.residents.util.StringUtil;
@@ -63,11 +65,11 @@ public class IndexController {
 						//设置session
 						StudentSession studentSession = new StudentSession(userID);
 						session.setAttribute("studentSession", studentSession);
-						return "redirect:stuInformation";
+						return "redirect:/stuInformation";
 					}else{						
 						StudentSession studentSession = new StudentSession(userID);
 						session.setAttribute("studentSession", studentSession);
-						return "redirect:index";
+						return "redirect:/index";
 					}
 				}
 				else 

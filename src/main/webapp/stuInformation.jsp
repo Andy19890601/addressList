@@ -50,11 +50,13 @@
 
 <body>
 	<div class="header">
-		<img class="logo-img" src="/static/img/logo-v4.png">
-		<div>
-			<h1>北京大学软件与微电子学院院友网</h1>
+			<!--	<h1 class="logo"><a href="http://www.lanrentuku.com" target="_blank"><img src="images/logo.jpg" alt="123"></a></h1>  -->
+			<!--  	<h1>北京大学软件与微电子学院院友网</h1> -->
+			<a href="homepage.jsp"><img class="logo-img" src="static/img/logo-v4.png"></a>
+			<div>
+				<a href="homepage.jsp"><h1>北京大学软件与微电子学院院友网</h1></a>
+			</div>
 		</div>
-	</div>
 	<div class="stuInfoDiv">
 		<h2>请先完善您的资料</h2>
 		<hr />
@@ -163,14 +165,15 @@
 						onblur="if (value ==''){value='填写擅长领域或求职、内推、招聘等信息140字以内'}">填写擅长领域或求职、内推、招聘等信息140字以内</textarea>
 					<br> <input type="submit" id="stuInfoSubmit" value=" 下一步  "
 						style="height: 30px; margin-left: 400px;"
-						class="ui-button ui-widget ui-state-default ui-corner-all"
-						role="button">
+						/>
 				</fieldset>
 			</form>
 		</div>
 	</div>
 
-	<div class="footer_layout">
-		</div>
+	<div class="footer_layout_container">
+<div class="footer_layout">
+</div>
+</div>
 </body>
 </html>

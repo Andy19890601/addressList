@@ -1,0 +1,71 @@
+
+#body {
+width: 986px;
+background: #FFF;
+margin: 0px auto;
+padding: 10px 10px 50px 10px;
+_margin-top: -3px;
+}
+#findnews{
+	font-weight:bold;
+}
+#main_left {
+width: 680px;
+float: left;
+}
+.con_list {
+margin: 10px;
+}
+.con_list li {
+height: 27px;
+position: relative;
+background: url("../img/dot1.gif") no-repeat 0 5px;
+padding-left: 10px;
+}
+.a14 a {
+font-size: 14px;
+}
+
+#sidebar_right {
+width: 237px;
+float: right;
+background-color: #F6FAFB;
+margin-top: 28px;
+}
+.sidebar_title {
+font-size: 14px;
+height: 30px;
+line-height: 30px;
+color: #960300;
+font-weight: bold;
+background: url("/static/images/small_title_bg.jpg") no-repeat;
+border-top: 2px solid #960300 !important;
+border: 1px solid #DDD;
+padding-left: 15px;
+}
+.sidebar_box {
+border: 1px solid #DDD;
+border-top-width: 0;
+padding: 10px;
+}
+.nodata {
+color: #999;
+font-size:12px;
+}
+.con_small_list {
+margin: 5px;
+}
+.con_list li span {
+position: absolute;
+top: 0;
+right: 0;
+color: #999;
+}
+ul.ranking {
+background: url("../img/topNum.gif") no-repeat;
+font-size:12px;
+}
+ul.ranking li {
+padding-left: 25px;
+height: 23px;
+}

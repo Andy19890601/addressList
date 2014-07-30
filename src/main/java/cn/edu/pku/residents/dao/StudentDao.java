@@ -28,7 +28,7 @@ public class StudentDao extends AdvancedHibernateDao<Student>{
 	 * @return
 	 */
 	public List<Student> list(StudentQueryRestrictions restrictions, Page page){
-
+		System.out.println(restrictions.toString());
 		DetachedCriteria criteria = DetachedCriteria
 				.forClass(Student.class);
 		if (restrictions != null) {
@@ -94,7 +94,7 @@ public class StudentDao extends AdvancedHibernateDao<Student>{
 	
 	public int getinformationCompleteStatus(String username){
 		DetachedCriteria criteria = DetachedCriteria.forClass(Student.class);
-		criteria.add(Restrictions.eq("studentName", username));
+		criteria.add(Restrictions.eq("studentID", username));
 		criteria.add(Restrictions.eq("informationComplete", 0));
 		List<Student> list = hibernateTemplate.findByCriteria(criteria);
 		if(list.size() >= 1){

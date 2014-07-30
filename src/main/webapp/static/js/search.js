@@ -2,7 +2,7 @@ $(function () {
 
   //入学年份
 	var currentYear = new Date().getFullYear();
-    var select = document.getElementById("studentEnrollment");
+    var select = document.getElementById("stuEnrollment");
     if(select!=null){
     	
     	  for (var i = 2002; i <= currentYear; i++) {
@@ -33,7 +33,7 @@ $(function () {
     var device = $(this).data('device');
     $(this).addClass('btn-active').siblings().removeClass('btn-active');
     $(device).addClass('item-active').siblings().removeClass('item-active');
-    $('#expandZone').animate({height: '155px'}).addClass('active');
+    $('#expandZone').animate({height: '115px'}).addClass('active');
  //   $('.navlist-wrap').animate({height: '185px'});
     return false;
   });

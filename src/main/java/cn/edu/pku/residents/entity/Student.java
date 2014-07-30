@@ -37,11 +37,18 @@ public class Student {
 	private String studentIndustryTag;
 	private String studentCompany;
 	private String studentPost;
+	private String studentLicense;
 	/** 学生入学年份 */
 	private String studentYear; 
 	private String studentDescription;
 	private int informationComplete;
 	
+	public String getStudentLicense() {
+		return studentLicense;
+	}
+	public void setStudentLicense(String studentLicense) {
+		this.studentLicense = studentLicense;
+	}
 	public String getStudentID() {
 		return studentID;
 	}

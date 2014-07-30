@@ -1,3 +1,6 @@
+#findStu{
+	font-weight:bold;
+}
 .turnPageSpan{
 	color:blue;
 	cursor:pointer;
@@ -31,4 +34,165 @@ a.sendMsg:hover{
 }
 .toDetailDiv span{
 	margin-left: 15px;
+}
+.sendMessageDiv{
+width: 80px;
+height: 25px;
+margin-top: 10px;
+float: left;
+}
+.MessageContainerDIV{
+	width:100%;
+	height:100%;
+	background-color:grey;
+	position:absolute;
+	top:0px;
+	opacity: 0.95;
+	display:none;
+}
+.MessageDIV{
+	width:545px;
+	height:240px;
+	background-color:#FFFFFF;	
+	margin-top:150px;	
+	padding-left:10px;
+}
+#messageForm input{
+	float:right;
+	margin-right:18px;
+	margin-top:10px;
+	width:70px;
+	height:30px;
+	cursor:hand;
+}
+
+/* ---------------------   ------------------------------------------ */
+
+#userHeadImg{
+	
+}
+.userHeadDiv{
+	float:left;
+	
+}
+/* --------------------------------------------------------------- */
+.showSearchResult{
+	padding-top:5px;
+	font: 15px 'Source Sans Pro',Arial,Helvetica,sans-serif;
+	color: #585754;
+	font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, Arial, sans-serif,TrueType;
+}
+.resultDiv{
+	
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.detailInforDiv{
+	float:left;
+	margin-left:10px;
+}
+#basicInforDiv span{
+	width:120px;
+}
+#basicInforTable{
+/*	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; */
+	font-family: Tahoma,Verdana,STHeiTi,simsun,sans-serif;
+	background-color:#FFFFFF;
+	width: 100%;
+	
+	border-style:inset;
+	word-break:break-all; 
+	word-wrap:break-word;
+	border-width:0px;
+}
+#basicInforTable td{
+	border-style:ridge;
+}
+/* --------------------------------------------------------------- */
+
+#baseInforDiv{
+	font-family: Tahoma,Verdana,STHeiTi,simsun,sans-serif;
+	float:left;
+	width:70%;
+	height:100%;
+	background-color:#FFFFFF;
+	border-right: 5px double #DDD;
+}
+#detailInforDiv{
+	float:left;
+	width:29%;
+	height:100%;
+	background-color:#FFFFFF;
+}
+.singleResultDiv{
+	height:120px;
+	margin-left:10%;
+	width:80%;
+	background-color:;
+	margin-top:10px;
+	border-bottom: 1px solid #DDD;
+	max-width:700px;
+	
+	
+}
+.userHeadImg{
+	float:left;
+	margin:10px;
+	height:100px;
+	width:100px;
+}
+.userHeadImgInTable{
+	float:left;
+	margin:0px;
+	height:100px;
+	width:100px;
+}
+
+.userHeadImg img{
+	height:100px;
+	width:100px;
+}
+.baseUserInformation{
+	float:left;
+	margin:10px;
+	max-width:560px;
+}
+#userNameDiv{
+	float:left;
+	height:30px;
+	width:100%;
+}
+#userNameDiv span{
+	color:#369;
+	font-weight:bold;
+}
+#userBaseInforDiv {
+	font-size:9pt;
+	float: left;
+	width:100%;
+	margin-top: 20px;
+}
+#userBaseInforDiv .userProperty{
+	color:#aaa;
+}
+
+.toDetailDiv{
+	float:right;
+	color:blue;
+	cursor:hand;
+	margin-top:15px;
+}
+.singleDetailDiv{
+	display:none; 
+	width: 29%;
+	float: right;
+}
+.tr_style{	
+    border-bottom-style: hidden;	
+}
+#noSearchResultDIV div{
+	text-align: center;
+	position: relative;
+	top: 45px
 }

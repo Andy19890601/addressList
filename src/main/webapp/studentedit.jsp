@@ -41,15 +41,19 @@ Student s = (Student)request.getAttribute("studentDetailInfo");
   </head>
   
   <body>
-	    <div class="header">
-		<img class="logo-img" src="/static/img/logo-v4.png">
-		<div><h1>北京大学软件与微电子学院院友网</h1></div>
+	  <div class="header">
+			<!--	<h1 class="logo"><a href="http://www.lanrentuku.com" target="_blank"><img src="images/logo.jpg" alt="123"></a></h1>  -->
+			<!--  	<h1>北京大学软件与微电子学院院友网</h1> -->
+			<a href="homepage.jsp"><img class="logo-img" src="static/img/logo-v4.png"></a>
+			<div>
+				<a href="homepage.jsp"><h1>北京大学软件与微电子学院院友网</h1></a>
+			</div>
 		</div>
 		
 		<div class="editContainDIV">
 			<div class="headimgDIV">
 				<div class="smallimgDIV">
-					<img src="/static/img/testHead.jpg" />			
+					<img src="<%=s.getStudentPicturePath()%>" />			
 				</div>
 				<div class="headinfo_0">
 					<span class="headspan0"><%=s.getStudentName()%></span>
@@ -149,11 +153,11 @@ Student s = (Student)request.getAttribute("studentDetailInfo");
 				</div>
 				<div class="info-section-info">
 					<dl class="info">
-					<dt>兴趣爱好</dt>
+					<dt>工作单位</dt>
 					<dd></dd>
 					</dl>
 					<dl class="info">
-					<dt>技能特长</dt>
+					<dt>职位</dt>
 					<dd><%=s.getStudentGoodAt()%></dd>
 					</dl>
 					<dl class="info">
@@ -214,7 +218,9 @@ Student s = (Student)request.getAttribute("studentDetailInfo");
 			
 		</div>
 		<div class="footer_layout_container">
+<div class="footer_layout_container">
 <div class="footer_layout">
+</div>
 </div>
 </div>
   </body>
