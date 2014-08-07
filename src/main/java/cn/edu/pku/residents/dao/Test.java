@@ -1,7 +1,3 @@
-/**
- * @author ivan
- * @author Copyright &copy; 2010 RiskMetrics Group, Inc. All rights reserved.
- */
 public class BFOReportBaseGenerator {
 
     // WB-1045: report parameters
@@ -462,3 +458,37 @@ public class BFOReportRequest {
         return p_draft.substring(0, m.end(1)) + "<div/>" + p_draft.substring(m.start(2), p_draft.length());
     }
 }
+
+public class BFOReportResponse {
+    
+    private final byte[] _draft; 
+    private final byte[] _final; 
+    /**
+     * Construct a response given a completed post.
+     * 
+     * @param postedReportPost A post which has already been posted.  Typically
+     * either a PostMethod or a MultipartPostMethod.
+     */
+    protected BFOReportResponse(byte[] p_draft, byte[] p_final) {
+        _draft = p_draft;
+        _final =p_final;
+    }
+
+    public byte[] getDraftPDFBytes() {
+        return _draft;
+    }
+
+    public byte[] getFinalPDFBytes() {
+        return _final;
+    }
+
+    public boolean hasError() {
+        return _draft == null || _final == null;
+    }
+
+    public String getError() {
+        return new String(_draft == null? _final:_draft);
+    }
+
+}
+
